@@ -1,19 +1,21 @@
-import { Stack, Link } from 'expo-router';
+import React from 'react';
+import { SafeAreaView, ScrollView, View } from 'react-native';
+import Header from '~/components/Header';
+import Categories from '~/components/Categories';
+import Exercises from '~/components/Exercises';
+import UtilityBar from '~/components/UtilityBar';
 
-import { Button } from '~/components/Button';
-import { Container } from '~/components/Container';
-import { ScreenContent } from '~/components/ScreenContent';
-
-export default function Home() {
+const App = () => {
   return (
-    <>
-      <Stack.Screen options={{ title: 'Home' }} />
-      <Container>
-        <ScreenContent path="app/index.tsx" title="Home" />
-        <Link href={{ pathname: '/details', params: { name: 'Dan' } }} asChild>
-          <Button title="Show Details" />
-        </Link>
-      </Container>
-    </>
+    <SafeAreaView className="flex-1 bg-gray-100">
+      <ScrollView>
+        <Header />
+        <Categories />
+        <Exercises />
+        <UtilityBar />
+      </ScrollView>
+    </SafeAreaView>
   );
-}
+};
+
+export default App;
