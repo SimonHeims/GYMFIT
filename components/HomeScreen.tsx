@@ -12,8 +12,8 @@ const App = () => {
         <Header />
         <Categories />
         <Exercises />
+        <UtilityBar />
       </ScrollView>
-      <UtilityBar />
     </SafeAreaView>
   );
 };

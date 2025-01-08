@@ -1,8 +1,13 @@
 import React from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
 import { HomeIcon, UserIcon, CogIcon, BellIcon } from 'react-native-heroicons/outline';
+import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
+// import { RootStackParamList } from 'types';
+import ProfilePage from './ProfilePage';
 
 const UtilityBar = () => {
+  const navigation = useNavigation();
   return (
     <View className="absolute bottom-0 w-full flex-row items-center justify-around border-t bg-white py-4">
       <TouchableOpacity className="items-center">
@@ -15,7 +20,7 @@ const UtilityBar = () => {
         <Text className="mt-1 text-xs">Alerts</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity className="items-center">
+      <TouchableOpacity className="items-center" onPress={() => navigation.navigate('ProfilePage')}>
         <UserIcon size={24} color="black" />
         <Text className="mt-1 text-xs">Profile</Text>
       </TouchableOpacity>
