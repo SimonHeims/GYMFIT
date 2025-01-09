@@ -1,6 +1,12 @@
 import React from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
-import { HomeIcon, UserIcon, CogIcon, BellIcon } from 'react-native-heroicons/outline';
+import {
+  HomeIcon,
+  UserIcon,
+  CogIcon,
+  BellIcon,
+  ChatBubbleOvalLeftEllipsisIcon,
+} from 'react-native-heroicons/outline';
 import { useNavigation } from '@react-navigation/native';
 
 const UtilityBar = () => {
@@ -13,19 +19,24 @@ const UtilityBar = () => {
         <Text className="mt-1 text-xs">Home</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity className="items-center" onPress={() => navigation.navigate('Plans')}>
+      <TouchableOpacity className="items-center" onPress={() => navigation.navigate('Activity')}>
         <BellIcon size={24} color="black" />
-        <Text className="mt-1 text-xs">Notifications</Text>
+        <Text className="mt-1 text-xs">Activity</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity className="items-center" onPress={() => navigation.navigate('Chatting')}>
+        <ChatBubbleOvalLeftEllipsisIcon size={24} color="black" />
+        <Text className="mt-1 text-xs">Chat</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity className="items-center" onPress={() => navigation.navigate('Session')}>
+        <UserIcon size={24} color="black" />
+        <Text className="mt-1 text-xs">Session</Text>
       </TouchableOpacity>
 
       <TouchableOpacity className="items-center" onPress={() => navigation.navigate('Profile')}>
-        <UserIcon size={24} color="black" />
-        <Text className="mt-1 text-xs">Plans</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity className="items-center" onPress={() => navigation.navigate('Settings')}>
         <CogIcon size={24} color="black" />
-        <Text className="mt-1 text-xs">Settings</Text>
+        <Text className="mt-1 text-xs">Profile</Text>
       </TouchableOpacity>
     </View>
   );

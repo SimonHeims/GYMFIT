@@ -5,7 +5,7 @@ import Categories from '~/components/Categories';
 import Exercises from '~/components/Exercises';
 import UtilityBar from '~/components/UtilityBar';
 
-const App = () => {
+const HomeScreen = () => {
   return (
     <SafeAreaView className="flex-1 bg-gray-100">
       <ScrollView>
@@ -18,4 +18,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default HomeScreen;

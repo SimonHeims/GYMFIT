@@ -1,9 +1,5 @@
 import React from 'react';
-import { useNavigation } from '@react-navigation/native';
 import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
-
-const navigation = useNavigation();
-console.log(navigation);
 
 const ProfilePage = () => {
   const handleContinue = () => {
@@ -21,7 +17,6 @@ const ProfilePage = () => {
   return (
     <View className="flex-1 justify-center bg-white px-6">
       <Text className="mb-8 text-center text-2xl font-bold">GYM FIT</Text>
-
       <Text className="mb-2 text-center text-lg font-semibold">Create an account</Text>
       <Text className="mb-6 text-center text-gray-500">
         Enter your email to sign up for this app
